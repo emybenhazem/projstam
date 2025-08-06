@@ -1,0 +1,263 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 50px;
+  color: #020509;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.timer {
+  background-color: #eefffe;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.timer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-labels {
+  font-size: 16px;
+  color: #333;
+}
+
+.right-info h2 {
+  color: #007bff;
+  margin-bottom: 5px;
+
+}
+
+.task-list h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.task-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+/* Animation de fond dégradé */
+.background-animation {
+
+    background: linear-gradient(-45deg, #222222, #0011ff, rgba(0, 0, 0, 0.2), #000aff);
+    background-size: 400% 400%;
+    animation: _ngcontent-nvl-c1_gradientBG 10s ease infinite;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* En-tête */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+.title {
+  font-size: 50px;
+  color: #01060b;
+}
+
+/* Section timer */
+.timer {
+  background-color: #eef7ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-labels p,
+.right-info p,
+.right-info h2 {
+  margin: 5px 0;
+}
+
+/* Liste de tâches */
+.task-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.add-task {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-task input {
+  padding: 8px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  flex: 1;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #e6f0fa;
+  padding: 10px 20px;
+  border-bottom: 2px solid #2196f3;
+}
+
+.title.text-blue {
+  color: #080e13;
+  margin-left: 15px;
+}
+
+
+
+.timer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.input-modern {
+  display: block;
+  margin: 5px 0 15px;
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.compteur-digital {
+  font-size: 2.5rem;
+  font-family: 'Courier New', monospace;
+  color: #333;
+  background: #e3f2fd;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.delete-btn {
+  margin-left: 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+.temps-total-box {
+  display: flex;
+  align-items: center;
+  background-color: #e3f2fd;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0d47a1;
+  width: fit-content;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.temps-total-box .icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.temps-total-box .label {
+  margin-right: 8px;
+}
+
+.temps-total-box .value {
+  font-weight: bold;
+  color: #1565c0;
+}
+.ot-item-info {
+  font-weight: bold;
+  font-size: 22px;
+  color: #1565c0; /* Bleu vif */
+}
+.terminee {
+  color: red;
+  font-weight: bold;
+}

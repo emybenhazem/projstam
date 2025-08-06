@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Yde9+CmBvVgbZuJIsull9wUSNXNEYDNjS+iHewbLcW8=",
+  "Source": "TaskManagementApp",
+  "BasePath": "_content/TaskManagementApp",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

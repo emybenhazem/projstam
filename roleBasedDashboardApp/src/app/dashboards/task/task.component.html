@@ -1,0 +1,105 @@
+
+<div class="container">
+  <div class="reference-details">
+    <br><br>
+    <h3 class="text-center mb-4">
+      <h2>Liste des tâches sélectionnées</h2>
+    </h3>
+
+    <p> <strong></strong></p>
+  </div>
+
+<!-- Affichage du temps total d'exécution formaté -->
+<p style=" font-size: 1.2rem;
+color: #007BFF;
+font-weight: bold;">Temps total d'exécution : {{ (tempsTotal) }}</p>
+
+  <!-- Liste des tâches sélectionnées -->
+  <h3 class="text-center mb-4">
+  </h3>
+
+
+<!-- Liste des tâches sélectionnées -->
+
+<!-- Si aucune tâche n'est sélectionnée -->
+<div *ngIf="selectedTasks.length > 0; else noTasks">
+  <h3>Tâches sélectionnées</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ReferencePiece</th>
+        <th>Description</th>
+        <th>Temps d'exécution</th>
+        <th>Priorité</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of selectedTasks">
+        <td>{{ task.id }}</td>
+        <td>{{ task.referencePieceCode }}</td>
+
+        <td>{{ task.description }}</td>
+        <td>{{ task.tempsExecution }}</td>
+        <td>{{ task.priorite }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Message si aucune tâche n'est sélectionnée -->
+
+  <!-- Temps total -->
+  <!-- Bouton pour sauvegarder les tâches sélectionnées -->
+</div>
+<div>
+
+
+
+
+  </div>
+
+  <ng-template #noTasks>
+  </ng-template>
+  <br>
+  <button class="btn btn-primary btn-lg" (click)="repartirTachesSurMachines2()">Distribuer les tâches sur les machines</button>
+
+ <br>
+ <br>
+  <h2>Répartition des tâches sur les 5 postes (Équilibrée)</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Place</th>
+
+        <th>Description des tâches</th>
+        <th>Temps total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let machine of machines">
+        <td> {{ machine.id }}</td>
+
+        <td>
+          <li *ngFor="let task of machine.tasks">
+
+
+          <ul>
+            <li *ngFor="let task of machine.tasks">
+              {{ task.description }}
+
+
+            </li>
+          </ul>
+        </td>
+          <td>{{ formatTime(machine.totalTime) }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="ajouterNouvelleTache(machine)">
+            Envoyer les tâches
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>

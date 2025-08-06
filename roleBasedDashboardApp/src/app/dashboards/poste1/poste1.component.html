@@ -1,0 +1,83 @@
+<div class="background-animation">
+  <div class="container">
+
+    <!-- 🔷 En-tête modernisée -->
+    <header class="header">
+      <img src="assets/logo1.png" alt="Logo" class="logo" />
+      <h1 class="title text-blue">Place 1</h1>
+    </header>
+
+    <!-- ⏱️ Zone d'infos avec inputs -->
+    <section class="timer modern-timer-box">
+      <div class="timer-content">
+        <div class="left-labels">
+          <!-- 🔍 Champ pour scanner ou entrer OT -->
+          <label for="ot"><strong>OT :</strong></label>
+          <input id="ot"
+                 type="text"
+                 [(ngModel)]="ot"
+                 (ngModelChange)="saveOT()"
+                 placeholder="Ex: 2407019p44501"
+                 class="input-modern" />
+
+          <!-- ✏️ Champ pour ITEM -->
+          <label for="item"><strong>ITEM :</strong></label>
+          <input id="item"
+                 type="number"
+                 [(ngModel)]="item"
+                 (ngModelChange)="saveItem()"
+                 placeholder="Ex: 36"
+                 class="input-modern" />
+                 <p class="ot-item-info"><strong>OT :</strong> {{ ot }} | <strong>ITEM :</strong> {{ item }}</p>
+
+        </div>
+
+        <div class="temps-container">
+          <div class="temps-total-box">
+            <span class="icon">🕒</span>
+            <span class="label">Temps total :</span>
+            <span class="value">{{ (tempsTotal) }}</span>
+          </div>
+
+          <div class="right-info">
+            <h2>⏰ <span style="color:#1976d2">Compteur</span></h2>
+            <p class="compteur-digital">
+              {{ formatTimeMMSS(compteur) }}
+            </p>
+          </div>
+        </div>
+
+        </div>
+
+    </section>
+    <section class="add-task">
+      <h3>Ajouter une tâche</h3>
+      <input
+        type="text"
+        [(ngModel)]="nouvelleTache.nom"
+        (keydown.enter)="ajouterTache()"
+        placeholder="Nom de la tâche"
+      />
+      <input
+        type="number"
+        [(ngModel)]="nouvelleTache.temps"
+        (keydown.enter)="ajouterTache()"
+        placeholder="Temps (min)"
+      />
+    </section>
+    <!-- ✅ Liste des tâches -->
+    <section class="task-list">
+      <h1>Liste des tâches</h1>
+      <ul>
+        <li *ngFor="let tache of tasks"
+        [ngStyle]="{ color: tache.terminee ? 'red' : 'black' }">
+        <strong>{{ tache.nom }}</strong> - {{ tache.temps }} sec
+          <button (click)="supprimerTache(tache)">🗑️</button>
+        </li>
+      </ul>
+
+
+    </section>
+
+  </div>
+</div>

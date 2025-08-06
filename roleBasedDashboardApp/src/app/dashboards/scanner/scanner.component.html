@@ -1,0 +1,33 @@
+
+
+<h2>Ajouter une référence de pièce</h2>
+
+<form (ngSubmit)="addReference()">
+  <div>
+    <label>Code :</label>
+    <input type="text" [(ngModel)]="currentPiece.code" name="code" required />
+  </div>
+
+  <div>
+    <label>Nom :</label>
+    <input type="text"  />
+  </div>
+
+  <div>
+    <label>Temps total d'exécution :</label>
+    <input type="text"  />
+  </div>
+
+  <button type="submit">Ajouter à la liste</button>
+</form>
+
+<hr />
+
+<h3>Liste des références à enregistrer :</h3>
+<ul>
+  <li *ngFor="let piece of pieces">
+    ✔️ {{ piece.code }} -
+  </li>
+</ul>
+
+<button (click)="submitAll()" [disabled]="pieces.length === 0">Envoyer au serveur</button>

@@ -1,0 +1,61 @@
+<div class="container my-5 p-4 border rounded bg-light shadow-sm">
+  <br>
+  <br>
+  <br>
+  <h3 class="text-center mb-4">Ajouter une Nouvelle Tâche</h3>
+
+  <form [formGroup]="tacheForm" (ngSubmit)="onSubmit()">
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description :</label>
+      <input type="text" id="description" formControlName="description" class="form-control" required />
+      <div *ngIf="tacheForm.get('description')?.invalid && tacheForm.get('description')?.touched" class="text-danger">
+        Description est requise.
+      </div>
+    </div>
+
+    <!-- Temps -->
+    <div class="form-group">
+      <label for="time">Temps (en minutes) :</label>
+      <input
+        type="number"
+        id="time"
+        formControlName="time"
+        class="form-control"
+        required
+        [min]="1" />
+      <div *ngIf="tacheForm.get('time')?.invalid && tacheForm.get('time')?.touched" class="text-danger">
+        Temps est requis et doit être supérieur à 0.
+      </div>
+    </div>
+
+    <!-- Ordre -->
+    <div class="form-group">
+      <label for="ordre">Ordre :</label>
+      <input type="number" id="ordre" formControlName="ordre" class="form-control" required />
+      <div *ngIf="tacheForm.get('ordre')?.invalid && tacheForm.get('ordre')?.touched" class="text-danger">
+        Ordre est requis et doit être supérieur à 0.
+      </div>
+    </div>
+
+    <!-- Pièce -->
+
+
+
+    <div class="form-group">
+      <label for="referencePieceId">Référence de la pièce</label>
+      <select id="referencePieceId" formControlName="referencePieceId" class="form-control">
+        <option value="" disabled>Sélectionnez une référence</option>
+        <option *ngFor="let reference of references" [value]="reference.code"> <!-- Utilisation du code de la référence -->
+          {{ reference.code }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Bouton de soumission -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary mt-3" >Ajouter la Tâche</button>
+    </div>
+  </form>
+</div>

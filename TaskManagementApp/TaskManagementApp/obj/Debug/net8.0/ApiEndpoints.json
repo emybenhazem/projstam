@@ -1,0 +1,680 @@
+[
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_6",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "AdminDashboard",
+    "RelativePath": "api/Auth/admin/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "Loginn",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "TaskManagementApp.Models.AppUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "GetPoste1Token",
+    "RelativePath": "api/Auth/poste1-token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "GetTasksForPoste1",
+    "RelativePath": "api/Auth/poste1/tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "GetPoste2Token",
+    "RelativePath": "api/Auth/poste2-token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "GetPoste3Token",
+    "RelativePath": "api/Auth/poste3-token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "GetPoste4Token",
+    "RelativePath": "api/Auth/poste4-token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.AuthController",
+    "Method": "GetPoste5Token",
+    "RelativePath": "api/Auth/poste5-token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MachinesController",
+    "Method": "ReceiveTasks",
+    "RelativePath": "api/machines/{machineId}/tasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machineId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MachinesController\u002BTaskRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MachinesController",
+    "Method": "GetTasks1",
+    "RelativePath": "api/machines/{machineId}/tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machineId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "referenceCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MachinesController",
+    "Method": "AddTasks",
+    "RelativePath": "api/machines/api/machines/{machineId}/tasks2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machineId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tasks",
+        "Type": "System.Collections.Generic.List\u00601[[MachinesController\u002BTaskDto, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MachinesController",
+    "Method": "SauvegarderTaches",
+    "RelativePath": "api/machines/sauvegarder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taches",
+        "Type": "System.Collections.Generic.List\u00601[[TaskManagementApp.Models.Tache, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.ReferencePiecesController",
+    "Method": "PostReferencePieces",
+    "RelativePath": "api/ReferencePieces",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referencePieces",
+        "Type": "System.Collections.Generic.List\u00601[[TaskManagementApp.Models.ReferencePiece, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.ReferencePiecesController",
+    "Method": "GetReferencePieces",
+    "RelativePath": "api/ReferencePieces",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskManagementApp.Models.ReferencePiece, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.ReferencePiecesController",
+    "Method": "AjouterTachesAReference",
+    "RelativePath": "api/ReferencePieces/{referenceId}/Taches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referenceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tacheIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.ReferencePiecesController",
+    "Method": "GetAllReferencesWithExecutionTime",
+    "RelativePath": "api/ReferencePieces/all-references",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.ReferencePiecesController",
+    "Method": "CalculateAndUpdateAllExecutionTimes",
+    "RelativePath": "api/ReferencePieces/calculate-all",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.ReferencePiecesController",
+    "Method": "CalculateAndDisplayTotalExecutionTime",
+    "RelativePath": "api/ReferencePieces/calculate-and-display-total-execution-time",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "PostTache",
+    "RelativePath": "api/Taches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tache",
+        "Type": "TaskManagementApp.Models.Tache",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "GetTaches",
+    "RelativePath": "api/Taches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskManagementApp.Models.Tache, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "GetTache",
+    "RelativePath": "api/Taches/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagementApp.Models.Tache",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "AddTache",
+    "RelativePath": "api/Taches/AddTache",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTache",
+        "Type": "TaskManagementApp.Models.Tache",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "AddTache2",
+    "RelativePath": "api/Taches/AddTache2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tache",
+        "Type": "TaskManagementApp.Models.Tache",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "AssignTasks",
+    "RelativePath": "api/Taches/assignTasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TaskManagementApp.Models.AssignTasksRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TachesController",
+    "Method": "GetGroupedTaches",
+    "RelativePath": "api/Taches/ExecutionTimes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetReferenceByCode",
+    "RelativePath": "api/TachesSelectionnees/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetTachesForReferencePiece",
+    "RelativePath": "api/TachesSelectionnees/{referencePieceId}/Taches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referencePieceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "AffecterTaches",
+    "RelativePath": "api/TachesSelectionnees/AffecterTaches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TaskManagementApp.DTOs.AffecterTachesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetTachesForReference2",
+    "RelativePath": "api/TachesSelectionnees/api/TachesSelectionnees/{referencePieceId}/Taches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referencePieceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetTachesForReferencetime",
+    "RelativePath": "api/TachesSelectionnees/api/TachesSelectionnees/{referencePieceId}/TachesTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referencePieceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetAllTaches",
+    "RelativePath": "api/TachesSelectionnees/api/TachesSelectionnees/Taches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetTotalExecutionTimes",
+    "RelativePath": "api/TachesSelectionnees/GetTotalExecutionTimes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetGroupedTaches",
+    "RelativePath": "api/TachesSelectionnees/grouped-taches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "PostTachesSelectionnees",
+    "RelativePath": "api/TachesSelectionnees/PostTachesSelectionnees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "selectedTasks",
+        "Type": "System.Collections.Generic.List\u00601[[TacheSelectionneeDto, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "SauvegarderTachesSelectionnees",
+    "RelativePath": "api/TachesSelectionnees/Sauvegarder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tachesSelectionneesDto",
+        "Type": "System.Collections.Generic.List\u00601[[TacheSelectionneeDto, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetSortedTasksByReferenceCode",
+    "RelativePath": "api/TachesSelectionnees/sorted/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referenceCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TachesSelectionneesController",
+    "Method": "GetTasksByReferenceCode",
+    "RelativePath": "api/TachesSelectionnees/unsorted/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "referenceCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TaskofMachineController",
+    "Method": "AjouterTache",
+    "RelativePath": "api/TaskofMachine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taches",
+        "Type": "System.Collections.Generic.List\u00601[[TaskofMachine, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TaskofMachineController",
+    "Method": "ObtenirTaches",
+    "RelativePath": "api/TaskofMachine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TaskofMachineController",
+    "Method": "GetTasksByMachine",
+    "RelativePath": "api/TaskofMachine/getTasks/{machineId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machineId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.TaskofMachineController",
+    "Method": "GetTasksByMachineAndReference",
+    "RelativePath": "api/TaskofMachine/getTasks/{machineId}/{referencePieceCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "machineId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "referencePieceCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.OrdonnancementController",
+    "Method": "RepartirTaches",
+    "RelativePath": "repartir-taches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tachesSelectionnees",
+        "Type": "System.Collections.Generic.List\u00601[[TaskManagementApp.Models.Task, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagementApp.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskManagementApp.WeatherForecast, TaskManagementApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

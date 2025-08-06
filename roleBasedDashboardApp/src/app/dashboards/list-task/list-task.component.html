@@ -1,0 +1,73 @@
+<div class="container my-4">
+  <h3 class="text-center mb-4">Sélectionner la liste de tâche pour la référence {{ this.ReferencePiece }}</h3>
+  <p>Nombre de tâches sélectionnées : {{ selectedTasks.length }}</p>
+
+  <div class="table-responsive" *ngIf="taches.length > 0; else noTasks">
+    <table class="table table-bordered table-striped table-hover shadow-sm">
+      <thead class="table-primary">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col"></th>
+          <th scope="col">Description</th>
+          <th scope="col">Temps d'Exécution</th>
+          <th scope="col">Priorité</th>
+          <th scope="col">Place</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of taches">
+          <td>{{ task.id }}</td>
+          <td>
+
+            <input
+              type="checkbox"
+              [checked]="task.selected"
+              (change)="changeSelection(task)"
+            />
+          </td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.tempsExecution }}</td>
+          <td>
+            <input
+              type="number"
+              min="1"
+              [(ngModel)]="task.priorite"
+              placeholder="Priorité"
+              class="form-control"
+            />
+          </td>
+          <!-- Colonne pour définir la place -->
+          <td>
+            <input
+              type="number"
+              min="1"
+              max="5"
+              [(ngModel)]="task.place"
+              placeholder="Place"
+              class="form-control"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <button class="btn btn-primary ms-auto" (click)="saveTasksWithPriorityAndPlace()">Voir Tâches Regroupées</button>
+
+    <div>
+  <div class="d-flex justify-content-between align-items-center">
+
+    <button class="btn btn-primary ms-auto" (click)="naviguerEtCalculer()">Calculer le temps d'exécution</button>
+    <div>
+<!-- Appel de la méthode avec un argument (par exemple, référence de la tâche) -->
+<button (click)="saveTasksForReference()" class="btn btn-primary">
+  Sauvegarder les tâches pour la référence choisie
+</button>
+
+    </div>
+
+  </div>
+
+  <ng-template #noTasks>
+    <p>Aucune tâche disponible.</p>
+  </ng-template>
+</div>

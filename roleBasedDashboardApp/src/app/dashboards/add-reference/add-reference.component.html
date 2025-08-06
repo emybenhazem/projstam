@@ -1,0 +1,26 @@
+<div class="reference-container">
+  <h2 class="text-center mb-4">Liste des Références</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Code</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reference of references">
+        <td>{{ reference.id }}</td> <!-- Affiche l'ID de la référence -->
+        <td>{{ reference.code }}</td> <!-- Affiche le Code de la référence -->
+        <td>
+          <!-- Lorsqu'un utilisateur clique sur ce lien, il est redirigé vers la page des tâches de la référence -->
+
+          <button class="btn btn-primary" (click)="onSelectReference(reference.id)">
+            Affecter les tâches
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

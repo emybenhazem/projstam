@@ -1,0 +1,61 @@
+.bg-image {
+  background-image: url('path/to/your/background-image.jpg'); /* Ajoutez une image de fond si nécessaire */
+  background-size: cover;
+  background-position: center;
+}
+
+.login {
+  background-color: rgba(255, 255, 255, 0.8); /* Ajoutez une opacité pour rendre le fond légèrement transparent */
+  border-radius: 15px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.btn-login {
+  background-color: #007bff; /* Couleur personnalisée */
+  transition: background-color 0.3s; /* Transition pour l'effet hover */
+}
+
+.btn-login:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.carousel-inner img {
+  border-radius: 15px; /* Coins arrondis pour les images du carousel */
+}
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 220px;
+}
+
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.home-section {
+  margin-top: 20px;
+  background: #f0f4f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.login-section {
+  margin-top: 40px;
+  background: #e0e7ef;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}

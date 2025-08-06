@@ -1,0 +1,34 @@
+<h2>Scanner les codes à barres</h2>
+
+<form (submit)="addReference(); $event.preventDefault()">
+  <input
+    #codeInput
+    type="text"
+    [(ngModel)]="currentCode"
+    name="code"
+    required
+    placeholder="Scannez un code-barres..."
+    autofocus
+  />
+  <button type="submit">Ajouter</button>
+</form>
+
+<hr />
+
+<h3>Liste des références scannées :</h3>
+<ul>
+  <li *ngFor="let piece of pieces">{{ piece.code }}</li>
+</ul>
+
+<button (click)="addReference()" [disabled]="pieces.length === 0">
+  📤 Envoyer vers le serveur
+</button>
+<!-- Supprimer la condition de désactivation -->
+<button (click)="addReference1()">
+  📤 Ajouter la référence
+</button>
+<input type="text" [(ngModel)]="currentCode" #codeInput placeholder="Code de la référence" />
+<button (click)="addReference()">➕ Ajouter</button>
+<button (click)="nvoyerVersServeur()" [disabled]="pieces.length === 0">
+  📤 Envoyer vers le serveur
+</button>

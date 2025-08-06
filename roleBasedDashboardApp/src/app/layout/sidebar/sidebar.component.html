@@ -1,0 +1,48 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer mode="side" opened class="sidenav">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+
+      <!-- Liens accessibles uniquement à l'admin -->
+      <ng-container *ngIf="role === 'admin'">
+        <a mat-list-item routerLink="admin">🏠 Dashboard Admin</a>
+        <a mat-list-item routerLink="qr-code-scan">➕ajouter référence</a>
+        <a mat-list-item routerLink="add-reference">📋liste des référence</a>
+
+        <a mat-list-item routerLink="add-task">➕ajouter Tache</a>
+        <a mat-list-item routerLink="list-task">📋Liste Tache</a>
+        <a mat-list-item routerLink="task">📋 Affecter Tache</a>
+
+        <a mat-list-item routerLink="poste1">🛠️ Poste 1</a>
+        <a mat-list-item routerLink="poste2">🔧 Poste 2</a>
+        <a mat-list-item routerLink="poste2">🔧 Poste 3</a>
+        <a mat-list-item routerLink="poste2">🔧 Poste 4</a>
+        <a mat-list-item routerLink="poste2">🔧 Poste 5</a>
+
+
+      </ng-container>
+
+      <!-- Liens pour les autres rôles -->
+      <a mat-list-item *ngIf="role === 'poste1'" routerLink="poste1">🛠️ Poste 1</a>
+      <a mat-list-item *ngIf="role === 'poste2'" routerLink="poste2">🔧 Poste 2</a>
+
+      <!-- Bouton de déconnexion -->
+      <a mat-list-item (click)="logout()">🚪 Déconnexion</a>
+      <a mat-list-item *ngIf="role === 'poste2'" routerLink="poste2">🔧 Poste 2</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Dashboard</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

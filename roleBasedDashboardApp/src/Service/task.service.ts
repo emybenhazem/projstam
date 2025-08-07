@@ -143,7 +143,7 @@ getTasksByMachineAndReference(machineId: number, referenceCode?: string): Observ
   return this.http.get(url);
 }
 createTache(tache: any) {
-  return this.http.post('http://localhost:5000/api/Taches/AddTache2', tache);
+  return this.http.post('http://localhost:5000/api/Taches', tache);
 }
 
 

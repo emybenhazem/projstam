@@ -46,14 +46,17 @@ export class AddTaskComponent {
 
   onSubmit(): void {
     if (this.tacheForm.valid) {
+      const formValue = this.tacheForm.value;
       const tacheData = {
-        description: this.tacheForm.value.description,
-        time: this.tacheForm.value.time,
-        ordre: this.tacheForm.value.ordre,
-        referencePieceId: this.tacheForm.value.referencePieceId,
+        description: formValue.description,
+        tempsExecution: `00:00:${formValue.time}`, // Assuming time is in seconds
+        referencePieceId: formValue.referencePieceId,
+        place: formValue.ordre,
+        dependenceId: null, // Or some default value
+        priorite: 1, // Or some default value
       };
 
-      this.tacheService.createTache(this.tacheForm.value).subscribe({
+      this.tacheService.createTache(tacheData).subscribe({
         next: (response) => {
           console.log('Tâche ajoutée avec succès:', response);
 

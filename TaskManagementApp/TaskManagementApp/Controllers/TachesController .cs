@@ -97,20 +97,6 @@ namespace TaskManagementApp.Controllers
 
             return Ok("Les tâches ont été affectées avec succès.");
         }
-        [HttpPost("AddTache")]
-        public IActionResult AddTache([FromBody] Tache newTache)
-        {
-            if (newTache == null)
-            {
-                return BadRequest("Invalid data.");
-            }
-
-            _context.Taches.Add(newTache);
-            _context.SaveChanges();
-
-            return Ok("Tâche ajoutée avec succès.");
-        }
-
         [HttpGet("ExecutionTimes")]
         public IActionResult GetGroupedTaches()
         {
@@ -132,19 +118,6 @@ namespace TaskManagementApp.Controllers
                 .ToList();
 
             return Ok(groupedTaches);
-        }
-
-        [HttpPost("AddTache2")]
-        public async Task<IActionResult> AddTache2([FromBody] Tache tache)
-        {
-            if (string.IsNullOrEmpty(tache.Description) || tache.TempsExecution.TotalMinutes <= 0)
-            {
-                return BadRequest("Données invalides.");
-            }
-
-            _context.Taches.Add(tache);
-            await _context.SaveChangesAsync();
-            return Ok(tache);
         }
 
 

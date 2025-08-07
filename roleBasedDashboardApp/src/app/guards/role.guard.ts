@@ -18,7 +18,7 @@ export const RoleGuard: CanActivateFn = (
   console.log('🧩 Rôle extrait dans Guard :', userRole);
   console.log('🎯 Rôles attendus :', expectedRoles);
 
-  if (userRole && expectedRoles.includes(userRole)) {
+  if (userRole && (userRole === 'admin' || expectedRoles.includes(userRole))) {
     return true;
   }
 

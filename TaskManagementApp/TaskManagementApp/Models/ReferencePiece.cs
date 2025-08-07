@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace TaskManagementApp.Models
 {
@@ -10,6 +11,7 @@ namespace TaskManagementApp.Models
         public TimeSpan TotalExecutionTime { get; set; } // Temps d'exécution
         public string Nom { get; set; }
 
+        [JsonPropertyName("tasks")]
         public List<Tache> Taches { get; set; }
     }
 }

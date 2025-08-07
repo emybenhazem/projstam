@@ -50,7 +50,7 @@ export class AddTaskComponent {
       const tacheData = {
         description: formValue.description,
         tempsExecution: `00:00:${formValue.time}`, // Assuming time is in seconds
-        referencePieceId: formValue.referencePieceId,
+        referencePieceId: parseInt(formValue.referencePieceId, 10),
         place: formValue.ordre,
         dependenceId: null, // Or some default value
         priorite: 1, // Or some default value

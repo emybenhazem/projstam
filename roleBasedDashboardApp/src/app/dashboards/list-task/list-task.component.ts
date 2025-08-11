@@ -55,7 +55,7 @@ this.loadTaches()
 
   // Calcul du temps total des tâches sélectionnées
   calculerTempsTotal(): void {
-    const tachesSelectionnees = this.tasks.filter(task => task.selected);
+    const tachesSelectionnees = this.taches.filter(task => task.selected);
 
     if (tachesSelectionnees.length === 0) {
       alert('Veuillez sélectionner au moins une tâche.');
@@ -150,7 +150,7 @@ this.loadTaches()
 
   // Méthode pour sauvegarder les tâches sélectionnées dans le localStorage
   sauvegarderSelections(): void {
-    const selectedTasks = this.tasks.filter(task => task.selected);
+    const selectedTasks = this.taches.filter(task => task.selected);
     if (selectedTasks.length === 0) {
       alert('Veuillez sélectionner au moins une tâche.');
       return;
@@ -164,7 +164,8 @@ this.loadTaches()
 
 
   naviguerEtCalculer(): void {
-    if (this.selectedTasks.length === 0) {
+    const selectedTasks = this.taches.filter(task => task.selected);
+    if (selectedTasks.length === 0) {
       alert('Veuillez sélectionner au moins une tâche.');
       return;
     }

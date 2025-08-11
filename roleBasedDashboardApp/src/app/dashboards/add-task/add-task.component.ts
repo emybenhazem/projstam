@@ -47,6 +47,7 @@ export class AddTaskComponent {
   onSubmit(): void {
     if (this.tacheForm.valid) {
       const formValue = this.tacheForm.value;
+      console.log('Selected referencePieceId:', formValue.referencePieceId);
       const tacheData = {
         description: formValue.description,
         tempsExecution: `00:00:${formValue.time}`, // Assuming time is in seconds
